@@ -30,7 +30,7 @@ let init = function () {
 
     diceEl.classList.add("hidden");
     sectionZeroEl.classList.add("player--active");
-    currentOneEl.classList.remove("player--active");
+    sectionOneEl.classList.remove("player--active");
     sectionZeroEl.classList.remove("player--winner");
     sectionOneEl.classList.remove("player--winner");
 }
@@ -70,7 +70,7 @@ btnHoldEl.addEventListener('click', function(){
         scores[activePlayer] += currentScore;
         document.querySelector(`#score--${activePlayer}`).innerText =
           scores[activePlayer];
-        if (scores[activePlayer] >= 20) {
+        if (scores[activePlayer] >= 100) {
           playing = false;
           diceEl.classList.add("hidden");
           document
